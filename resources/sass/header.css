@@ -1,0 +1,81 @@
+@-webkit-keyframes LogoAnime {
+  from {
+    color: rgba(216, 112, 147, 0.95);
+  }
+  to {
+    color: #ffffff;
+    text-shadow: 4px 0px 0px rebeccapurple;
+  }
+}
+
+@keyframes LogoAnime {
+  from {
+    color: rgba(216, 112, 147, 0.95);
+  }
+  to {
+    color: #ffffff;
+    text-shadow: 4px 0px 0px rebeccapurple;
+  }
+}
+
+@keyframes LogoAnime {
+  from {
+    color: rgba(216, 112, 147, 0.95);
+  }
+  to {
+    color: #ffffff;
+    text-shadow: 4px 0px 0px rebeccapurple;
+  }
+}
+
+.richer__header {
+  width: 100%;
+  height: 12%;
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: 3px solid goldenrod;
+  outline-offset: -3px;
+  -webkit-box-shadow: 0px 0px 12px;
+          box-shadow: 0px 0px 12px;
+  background-image: linear-gradient(45deg, #72e4cb, #d841d88d);
+}
+
+.richer__header__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.richer__header__navList__title {
+  width: 75%;
+  padding-top: 3.5%;
+  font-size: 200%;
+  -webkit-animation-name: LogoAnime;
+          animation-name: LogoAnime;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
+  transition: all 0ms ease;
+}
+
+.richer__header__navList__user {
+  width: 25%;
+  padding: 6.6%;
+  border-left: 3px goldenrod solid;
+  -webkit-animation-name: LogoAnime;
+          animation-name: LogoAnime;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
+  transition: all 0ms ease;
+}
+/*# sourceMappingURL=header.css.map */

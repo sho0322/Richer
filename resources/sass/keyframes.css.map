@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU,CAAV,SAAU;EACN,IAAI;IACA,KAAK,EAAE,yBAAyB;;EAEpC,EAAE;IACE,KAAK,EAAE,OAAO;IACd,WAAW,EAAE,yBAAyB",
+    "sources": [
+        "keyframes.scss"
+    ],
+    "names": [],
+    "file": "keyframes.css"
+}

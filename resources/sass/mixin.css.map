@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,UAAU,CAAV,SAAU;EACN,IAAI;IACA,KAAK,EAAE,yBAAyB;;EAEpC,EAAE;IACE,KAAK,EAAE,OAAO;IACd,WAAW,EAAE,yBAAyB",
+    "sources": [
+        "mixin.scss",
+        "keyframes.scss"
+    ],
+    "names": [],
+    "file": "mixin.css"
+}

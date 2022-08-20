@@ -1,0 +1,33 @@
+@import "mixin";
+@import "keyframes";
+
+.richer__footer {
+    width: 100%;
+    height: 12%;
+    background-color: #3f51b57a;
+    position: fixed;
+    bottom: 0;
+    display: grid;
+    align-items: center;
+    outline: 3px solid goldenrod;
+    outline-offset: -3px;
+    @include boxShadowColor(9px);
+    &__navList {
+        display: flex;
+        &__timeline {
+            @include footerNavList("false");
+        }
+        &__schedule {
+            @include footerNavList("true");
+        }
+        &__search {
+            @include footerNavList("true");
+        }
+        &__bell {
+            @include footerNavList("true");
+        }
+        &__renraku {
+            @include footerNavList("true");
+        }
+    }
+}
