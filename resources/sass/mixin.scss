@@ -1,0 +1,31 @@
+@import "keyframes";
+
+@mixin gradientColor($direction, $colorFirst, $colorSecond) {
+    background-image: linear-gradient($direction, $colorFirst, $colorSecond);
+}
+@mixin footerNavList($judgement) {
+    width: 20%;
+    padding: 6.6% 0%;
+    animation-name: LogoAnime;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+    transition: all 0ms ease;
+    @if ($judgement == "true") {
+        border-left: 3px goldenrod solid;
+    }
+    &:active {
+        transform: translateY(2%);
+        background-color: #ffff;
+        transform: rotateY(180deg);
+    }
+}
+@mixin textShadowColor($textShadowColor) {
+    text-shadow: $textShadowColor 1px 0px 1px, $textShadowColor -1px 0px 1px,
+        $textShadowColor 0px -1px 1px, $textShadowColor -1px 0px 1px,
+        $textShadowColor 1px 1px 1px, $textShadowColor -1px 1px 1px,
+        $textShadowColor 1px -1px 1px, $textShadowColor -1px -1px 1px,
+        $textShadowColor 1px 1px 1px, $textShadowColor -1px 1px 1px;
+}
+@mixin boxShadowColor($boxShadowColor) {
+    box-shadow: 0px 0px $boxShadowColor;
+}

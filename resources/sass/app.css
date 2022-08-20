@@ -19,7 +19,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffff;
 }
 
 @-webkit-keyframes LogoAnime {
@@ -41,6 +41,7 @@ a {
     text-shadow: 4px 0px 0px rebeccapurple;
   }
 }
+
 @keyframes LogoAnime {
   from {
     color: rgba(216, 112, 147, 0.95);
@@ -50,6 +51,7 @@ a {
     text-shadow: 4px 0px 0px rebeccapurple;
   }
 }
+
 @keyframes LogoAnime {
   from {
     color: rgba(216, 112, 147, 0.95);
@@ -59,21 +61,30 @@ a {
     text-shadow: 4px 0px 0px rebeccapurple;
   }
 }
+
 .richer__header {
   width: 100%;
   height: 12%;
+  display: -ms-grid;
   display: grid;
   position: fixed;
   top: 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   outline: 3px solid goldenrod;
   outline-offset: -3px;
-  box-shadow: 0px 0px 12px;
-  background-image: linear-gradient(45deg, #72e4cb, rgba(216, 65, 216, 0.5529411765));
+  -webkit-box-shadow: 0px 0px 12px;
+          box-shadow: 0px 0px 12px;
+  background-image: linear-gradient(45deg, #72e4cb, #d841d88d);
 }
+
 .richer__header__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .richer__header__navList__title {
   width: 75%;
   padding-top: 3.5%;
@@ -84,8 +95,10 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
 }
+
 .richer__header__navList__user {
   width: 25%;
   padding: 6.6%;
@@ -96,6 +109,7 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
 }
 
@@ -108,6 +122,7 @@ a {
     text-shadow: 4px 0px 0px rebeccapurple;
   }
 }
+
 @keyframes LogoAnime {
   from {
     color: rgba(216, 112, 147, 0.95);
@@ -117,21 +132,30 @@ a {
     text-shadow: 4px 0px 0px rebeccapurple;
   }
 }
+
 .richer__footer {
   width: 100%;
   height: 12%;
-  background-color: rgba(63, 81, 181, 0.4784313725);
+  background-color: #3f51b57a;
   position: fixed;
   bottom: 0;
+  display: -ms-grid;
   display: grid;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   outline: 3px solid goldenrod;
   outline-offset: -3px;
-  box-shadow: 0px 0px 9px;
+  -webkit-box-shadow: 0px 0px 9px;
+          box-shadow: 0px 0px 9px;
 }
+
 .richer__footer__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .richer__footer__navList__timeline {
   width: 20%;
   padding: 6.6% 0%;
@@ -141,13 +165,18 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
 }
+
 .richer__footer__navList__timeline:active {
-  transform: translateY(2%);
-  background-color: white;
-  transform: rotateY(180deg);
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
+  background-color: #ffff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
 .richer__footer__navList__schedule {
   width: 20%;
   padding: 6.6% 0%;
@@ -157,14 +186,19 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
   border-left: 3px goldenrod solid;
 }
+
 .richer__footer__navList__schedule:active {
-  transform: translateY(2%);
-  background-color: white;
-  transform: rotateY(180deg);
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
+  background-color: #ffff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
 .richer__footer__navList__search {
   width: 20%;
   padding: 6.6% 0%;
@@ -174,14 +208,19 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
   border-left: 3px goldenrod solid;
 }
+
 .richer__footer__navList__search:active {
-  transform: translateY(2%);
-  background-color: white;
-  transform: rotateY(180deg);
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
+  background-color: #ffff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
 .richer__footer__navList__bell {
   width: 20%;
   padding: 6.6% 0%;
@@ -191,14 +230,19 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
   border-left: 3px goldenrod solid;
 }
+
 .richer__footer__navList__bell:active {
-  transform: translateY(2%);
-  background-color: white;
-  transform: rotateY(180deg);
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
+  background-color: #ffff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
 .richer__footer__navList__renraku {
   width: 20%;
   padding: 6.6% 0%;
@@ -208,13 +252,17 @@ a {
           animation-duration: 3000ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-transition: all 0ms ease;
   transition: all 0ms ease;
   border-left: 3px goldenrod solid;
 }
+
 .richer__footer__navList__renraku:active {
-  transform: translateY(2%);
-  background-color: white;
-  transform: rotateY(180deg);
+  -webkit-transform: translateY(2%);
+          transform: translateY(2%);
+  background-color: #ffff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .richer {
@@ -222,12 +270,15 @@ a {
   height: 100%;
   overflow-y: scroll;
 }
+
 .richer__changeContent {
   min-height: 100vh;
-  background-image: url(/images/apl_main_bg.jpg?f0583fb9dd4addbd0565a269873db607);
+  background-image: url(img/assets/apl_main_bg.jpg);
   background-size: cover;
 }
+
 .richer__changeContent__space {
   width: 100%;
   padding: 13% 0%;
 }
+/*# sourceMappingURL=app.css.map */
