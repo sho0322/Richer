@@ -76,7 +76,6 @@ a {
 }
 .richer__header__navList__title {
   width: 75%;
-  padding-top: 3.5%;
   font-size: 200%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
@@ -88,7 +87,7 @@ a {
 }
 .richer__header__navList__user {
   width: 25%;
-  padding: 6.6%;
+  padding-top: 3%;
   border-left: 3px goldenrod solid;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
@@ -134,7 +133,7 @@ a {
 }
 .richer__footer__navList__timeline {
   width: 20%;
-  padding: 6.6% 0%;
+  padding: 2.5% 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -144,13 +143,11 @@ a {
   transition: all 0ms ease;
 }
 .richer__footer__navList__timeline:active {
-  transform: translateY(2%);
   background-color: white;
-  transform: rotateY(180deg);
 }
 .richer__footer__navList__schedule {
   width: 20%;
-  padding: 6.6% 0%;
+  padding: 2.5% 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -161,13 +158,11 @@ a {
   border-left: 3px goldenrod solid;
 }
 .richer__footer__navList__schedule:active {
-  transform: translateY(2%);
   background-color: white;
-  transform: rotateY(180deg);
 }
 .richer__footer__navList__search {
   width: 20%;
-  padding: 6.6% 0%;
+  padding: 2.5% 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -178,13 +173,11 @@ a {
   border-left: 3px goldenrod solid;
 }
 .richer__footer__navList__search:active {
-  transform: translateY(2%);
   background-color: white;
-  transform: rotateY(180deg);
 }
 .richer__footer__navList__bell {
   width: 20%;
-  padding: 6.6% 0%;
+  padding: 2.5% 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -195,13 +188,11 @@ a {
   border-left: 3px goldenrod solid;
 }
 .richer__footer__navList__bell:active {
-  transform: translateY(2%);
   background-color: white;
-  transform: rotateY(180deg);
 }
 .richer__footer__navList__renraku {
   width: 20%;
-  padding: 6.6% 0%;
+  padding: 2.5% 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -212,9 +203,7 @@ a {
   border-left: 3px goldenrod solid;
 }
 .richer__footer__navList__renraku:active {
-  transform: translateY(2%);
   background-color: white;
-  transform: rotateY(180deg);
 }
 
 .richer {

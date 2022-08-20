@@ -16,7 +16,6 @@
         display: flex;
         &__title {
             width: 75%;
-            padding-top: 3.5%;
             font-size: 200%;
             animation-name: LogoAnime;
             animation-duration: 3000ms;
@@ -25,7 +24,7 @@
         }
         &__user {
             width: 25%;
-            padding: 6.6%;
+            padding-top: 3%;
             border-left: 3px goldenrod solid;
             animation-name: LogoAnime;
             animation-duration: 3000ms;
