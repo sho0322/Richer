@@ -16,20 +16,17 @@
     &__navList {
         display: flex;
         align-items: center;
-        &__timeline {
-            @include footerNavList("false");
-        }
-        &__schedule {
-            @include footerNavList("true");
-        }
-        &__search {
-            @include footerNavList("true");
-        }
-        &__bell {
-            @include footerNavList("true");
-        }
-        &__renraku {
-            @include footerNavList("true");
+
+        $footerNavLists: timeline, schedule, search, bell, renraku;
+
+        @each $footerNavList in $footerNavLists {
+            &__#{$footerNavList} {
+                @if ($footerNavList == "timeline") {
+                    @include footerNavList("false");
+                } @else {
+                    @include footerNavList("true");
+                }
+            }
         }
     }
 }
