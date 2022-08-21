@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import Top from "./Richer/Top";
 import User from "./Richer/LoginUser/Index";
 import Timeline from "./Richer/Timeline/Index";
 import Schedule from "./Richer/Schedule/Index";
@@ -15,7 +16,7 @@ const App = () => {
                 <div className={"richer__header"}>
                     <div className={"richer__header__navList"}>
                         <Link
-                            to="/"
+                            to="/Richer/"
                             className={"richer__header__navList__title"}
                         >
                             Richer
@@ -24,7 +25,11 @@ const App = () => {
                             to="/Richer/LoginUser/Index"
                             className={"richer__header__navList__user"}
                         >
-                            プロフ
+                            <span
+                                className={
+                                    "richer__header__navList__user__icon"
+                                }
+                            ></span>
                         </Link>
                     </div>
                 </div>
@@ -51,38 +56,23 @@ const App = () => {
                     <div className={"richer__changeContent__space"}></div>
                 </div>
                 <div className={"richer__footer"}>
-                    <div className={"richer__footer__navList"}>
-                        <Link
-                            to="/Richer/Timeline/Index"
-                            className={"richer__footer__navList__timeline"}
-                        >
-                            投稿
-                        </Link>
-                        <Link
-                            to="/Richer/Schedule/Index"
-                            className={"richer__footer__navList__schedule"}
-                        >
-                            予定
-                        </Link>
-                        <Link
-                            to="/Richer/Search/Index"
-                            className={"richer__footer__navList__search"}
-                        >
-                            検索
-                        </Link>
-                        <Link
-                            to="/Richer/Bell/Index"
-                            className={"richer__footer__navList__bell"}
-                        >
-                            通知
-                        </Link>
-                        <Link
-                            to="/Richer/Renraku/Index"
-                            className={"richer__footer__navList__renraku"}
-                        >
-                            連絡
-                        </Link>
-                    </div>
+                    <ul className={"richer__footer__navList"}>
+                        <li className={"richer__footer__navList__timeline"}>
+                            <Link to="/Richer/Timeline/Index">投稿</Link>
+                        </li>
+                        <li className={"richer__footer__navList__schedule"}>
+                            <Link to="/Richer/Schedule/Index">予定</Link>
+                        </li>
+                        <li className={"richer__footer__navList__search"}>
+                            <Link to="/Richer/Search/Index">検索</Link>
+                        </li>
+                        <li className={"richer__footer__navList__bell"}>
+                            <Link to="/Richer/Bell/Index">通知</Link>
+                        </li>
+                        <li className={"richer__footer__navList__renraku"}>
+                            <Link to="/Richer/Renraku/Index">連絡</Link>
+                        </li>
+                    </ul>
                 </div>
             </BrowserRouter>
         </div>

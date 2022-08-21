@@ -11,9 +11,11 @@
     align-items: center;
     outline: 3px solid goldenrod;
     outline-offset: -3px;
+    cursor: pointer;
     @include boxShadowColor(9px);
     &__navList {
         display: flex;
+        align-items: center;
         &__timeline {
             @include footerNavList("false");
         }
