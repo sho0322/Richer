@@ -46,12 +46,14 @@ var App = function App() {
   }, react_1["default"].createElement("div", {
     className: "richer__header__navList"
   }, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/",
+    to: "/Richer/",
     className: "richer__header__navList__title"
   }, "Richer"), react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/Richer/LoginUser/Index",
     className: "richer__header__navList__user"
-  }, "\u30D7\u30ED\u30D5"))), react_1["default"].createElement("div", {
+  }, react_1["default"].createElement("span", {
+    className: "richer__header__navList__user__icon"
+  })))), react_1["default"].createElement("div", {
     className: "richer__changeContent"
   }, react_1["default"].createElement("div", {
     className: "richer__changeContent__space"
@@ -71,24 +73,29 @@ var App = function App() {
     className: "richer__changeContent__space"
   })), react_1["default"].createElement("div", {
     className: "richer__footer"
-  }, react_1["default"].createElement("div", {
+  }, react_1["default"].createElement("ul", {
     className: "richer__footer__navList"
-  }, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/Richer/Timeline/Index",
+  }, react_1["default"].createElement("li", {
     className: "richer__footer__navList__timeline"
-  }, "\u6295\u7A3F"), react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/Richer/Schedule/Index",
+  }, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/Richer/Timeline/Index"
+  }, "\u6295\u7A3F")), react_1["default"].createElement("li", {
     className: "richer__footer__navList__schedule"
-  }, "\u4E88\u5B9A"), react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/Richer/Search/Index",
+  }, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/Richer/Schedule/Index"
+  }, "\u4E88\u5B9A")), react_1["default"].createElement("li", {
     className: "richer__footer__navList__search"
-  }, "\u691C\u7D22"), react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/Richer/Bell/Index",
+  }, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/Richer/Search/Index"
+  }, "\u691C\u7D22")), react_1["default"].createElement("li", {
     className: "richer__footer__navList__bell"
-  }, "\u901A\u77E5"), react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/Richer/Renraku/Index",
+  }, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/Richer/Bell/Index"
+  }, "\u901A\u77E5")), react_1["default"].createElement("li", {
     className: "richer__footer__navList__renraku"
-  }, "\u9023\u7D61")))));
+  }, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/Richer/Renraku/Index"
+  }, "\u9023\u7D61"))))));
 };
 
 react_dom_1["default"].render(react_1["default"].createElement(App, null), document.getElementById("app"));

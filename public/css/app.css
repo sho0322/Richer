@@ -65,7 +65,7 @@ a {
   display: grid;
   position: fixed;
   top: 0;
-  align-items: center;
+  justify-items: unset;
   outline: 3px solid goldenrod;
   outline-offset: -3px;
   box-shadow: 0px 0px 12px;
@@ -73,8 +73,10 @@ a {
 }
 .richer__header__navList {
   display: flex;
+  align-items: center;
 }
 .richer__header__navList__title {
+  padding: 15px;
   width: 75%;
   font-size: 200%;
   -webkit-animation-name: LogoAnime;
@@ -87,15 +89,35 @@ a {
 }
 .richer__header__navList__user {
   width: 25%;
-  padding-top: 3%;
+  height: 100%;
   border-left: 3px goldenrod solid;
-  -webkit-animation-name: LogoAnime;
-          animation-name: LogoAnime;
-  -webkit-animation-duration: 3000ms;
-          animation-duration: 3000ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  transition: all 0ms ease;
+}
+.richer__header__navList__user__icon {
+  position: absolute;
+  transform: scale(2.8);
+  top: 74.15%;
+  right: 10%;
+  bottom: 0%;
+  color: aliceblue;
+  width: 14px;
+  height: 6px;
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-top: solid 1px;
+  border-bottom: solid 1px transparent;
+  background-color: currentColor;
+  border-radius: 6px 6px 0 0;
+}
+.richer__header__navList__user__icon::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: 115%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid 1px;
+  background-color: currentColor;
 }
 
 @keyframes LogoAnime {
@@ -126,14 +148,16 @@ a {
   align-items: center;
   outline: 3px solid goldenrod;
   outline-offset: -3px;
+  cursor: pointer;
   box-shadow: 0px 0px 9px;
 }
 .richer__footer__navList {
   display: flex;
+  align-items: center;
 }
 .richer__footer__navList__timeline {
   width: 20%;
-  padding: 2.5% 0%;
+  padding: 25px 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -147,7 +171,7 @@ a {
 }
 .richer__footer__navList__schedule {
   width: 20%;
-  padding: 2.5% 0%;
+  padding: 25px 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -162,7 +186,7 @@ a {
 }
 .richer__footer__navList__search {
   width: 20%;
-  padding: 2.5% 0%;
+  padding: 25px 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -177,7 +201,7 @@ a {
 }
 .richer__footer__navList__bell {
   width: 20%;
-  padding: 2.5% 0%;
+  padding: 25px 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -192,7 +216,7 @@ a {
 }
 .richer__footer__navList__renraku {
   width: 20%;
-  padding: 2.5% 0%;
+  padding: 25px 0%;
   -webkit-animation-name: LogoAnime;
           animation-name: LogoAnime;
   -webkit-animation-duration: 3000ms;
@@ -218,5 +242,5 @@ a {
 }
 .richer__changeContent__space {
   width: 100%;
-  padding: 13% 0%;
+  padding: 45px;
 }
