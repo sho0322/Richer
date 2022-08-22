@@ -16,7 +16,7 @@ const App = () => {
                 <div className={"richer__header"}>
                     <div className={"richer__header__navList"}>
                         <Link
-                            to="/Richer/"
+                            to="/"
                             className={"richer__header__navList__title"}
                         >
                             Richer
@@ -35,6 +35,9 @@ const App = () => {
                 </div>
                 <div className={"richer__changeContent"}>
                     <div className={"richer__changeContent__space"}></div>
+                    <Route path="/">
+                        <Top />
+                    </Route>
                     <Route path="/Richer/LoginUser/Index">
                         <User />
                     </Route>

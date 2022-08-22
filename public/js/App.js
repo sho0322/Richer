@@ -26,6 +26,8 @@ var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_m
 
 var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 
+var Top_1 = __importDefault(__webpack_require__(/*! ./Richer/Top */ "./resources/ts/components/Richer/Top.tsx"));
+
 var Index_1 = __importDefault(__webpack_require__(/*! ./Richer/LoginUser/Index */ "./resources/ts/components/Richer/LoginUser/Index.tsx"));
 
 var Index_2 = __importDefault(__webpack_require__(/*! ./Richer/Timeline/Index */ "./resources/ts/components/Richer/Timeline/Index.tsx"));
@@ -46,7 +48,7 @@ var App = function App() {
   }, react_1["default"].createElement("div", {
     className: "richer__header__navList"
   }, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/Richer/",
+    to: "/",
     className: "richer__header__navList__title"
   }, "Richer"), react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/Richer/LoginUser/Index",
@@ -58,6 +60,8 @@ var App = function App() {
   }, react_1["default"].createElement("div", {
     className: "richer__changeContent__space"
   }), react_1["default"].createElement(react_router_dom_1.Route, {
+    path: "/"
+  }, react_1["default"].createElement(Top_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
     path: "/Richer/LoginUser/Index"
   }, react_1["default"].createElement(Index_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
     path: "/Richer/Timeline/Index"
@@ -273,6 +277,56 @@ var Index = function Index() {
 };
 
 exports["default"] = Index;
+
+/***/ }),
+
+/***/ "./resources/ts/components/Richer/Top.tsx":
+/*!************************************************!*\
+  !*** ./resources/ts/components/Richer/Top.tsx ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Top = function Top() {
+  addEventListener("load", function () {
+    // 時間によって挨拶の種類を変更する処理。
+    var getGreetingText = document.querySelector("#greetingText");
+    var GREETING_TYPE = ["おはようございます", "こんにちは", "こんばんは"];
+    var MORNING = GREETING_TYPE[0],
+        AFTERNOON = GREETING_TYPE[1],
+        EVENING = GREETING_TYPE[2];
+    var now = new Date();
+    var hour = now.getHours();
+
+    if (hour >= 4 && hour <= 10) {
+      getGreetingText.innerHTML = MORNING;
+    } else if (hour >= 11 && hour <= 17) {
+      getGreetingText.innerHTML = AFTERNOON;
+    } else if (hour >= 18 || hour <= 3) {
+      getGreetingText.innerHTML = EVENING;
+    }
+  });
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("h5", {
+    id: "greetingText",
+    className: "greetingText"
+  }));
+};
+
+exports["default"] = Top;
 
 /***/ }),
 
