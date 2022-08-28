@@ -48,7 +48,7 @@ var App = function App() {
   }, react_1["default"].createElement("div", {
     className: "richer__header__navList"
   }, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/",
+    to: "/Richer/Top",
     className: "richer__header__navList__title"
   }, "Richer"), react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/Richer/LoginUser/Index",
@@ -60,7 +60,7 @@ var App = function App() {
   }, react_1["default"].createElement("div", {
     className: "richer__changeContent__space"
   }), react_1["default"].createElement(react_router_dom_1.Route, {
-    path: "/"
+    path: "/Richer/Top"
   }, react_1["default"].createElement(Top_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
     path: "/Richer/LoginUser/Index"
   }, react_1["default"].createElement(Index_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
@@ -302,7 +302,7 @@ Object.defineProperty(exports, "__esModule", ({
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var Top = function Top() {
-  addEventListener("load", function () {
+  addEventListener("DOMContentLoaded", function () {
     // 時間によって挨拶の種類を変更する処理。
     var getGreetingText = document.querySelector("#greetingText");
     var GREETING_TYPE = ["おはようございます", "こんにちは", "こんばんは"];
@@ -319,11 +319,108 @@ var Top = function Top() {
     } else if (hour >= 18 || hour <= 3) {
       getGreetingText.innerHTML = EVENING;
     }
+
+    var topPageAnimationBg = document.querySelector("#topPageAnimationBg");
+    var onikitiImg = document.querySelector("#onikitiImg");
+    var mamemakiImg = document.querySelector("#mamemakiImg");
+    var loveImg = document.querySelector("#loveImg");
+    var topPageAnimationText = document.querySelector("#topPageAnimationText");
+    var time = 800;
+    setTimeout(function () {
+      onikitiImg === null || onikitiImg === void 0 ? void 0 : onikitiImg.classList.add("show");
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "オラはおにきち";
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "2月になると...";
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      topPageAnimationText.classList.add("show");
+      Object(topPageAnimationText).innerHTML = "悪いことしたくなるのだ";
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      onikitiImg === null || onikitiImg === void 0 ? void 0 : onikitiImg.classList.remove("show");
+      Object(topPageAnimationText).innerHTML = "";
+    }, time);
+    time += 1500;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "そして村に行き...";
+    }, time);
+    time += 2000;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "";
+    }, time);
+    time += 1000;
+    setTimeout(function () {
+      mamemakiImg === null || mamemakiImg === void 0 ? void 0 : mamemakiImg.classList.add("show");
+    }, time);
+    time += 3000;
+    setTimeout(function () {
+      mamemakiImg === null || mamemakiImg === void 0 ? void 0 : mamemakiImg.classList.remove("show");
+    }, time);
+    time += 500;
+    setTimeout(function () {
+      topPageAnimationBg === null || topPageAnimationBg === void 0 ? void 0 : topPageAnimationBg.classList.add("show");
+      Object(topPageAnimationText).innerHTML = "そして2月といえば...";
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "大切な人に思いを伝える";
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "バレンタインデー🍫";
+      Object(topPageAnimationText).setAttribute("style", "color: #e76a7f;");
+    }, time);
+    time += 1000;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "";
+    }, time);
+    time += 1000;
+    setTimeout(function () {
+      loveImg === null || loveImg === void 0 ? void 0 : loveImg.classList.add("show");
+    }, time);
+    time += 2000;
+    setTimeout(function () {
+      loveImg === null || loveImg === void 0 ? void 0 : loveImg.classList.remove("show");
+    }, time);
+    time += 1200;
+    setTimeout(function () {
+      Object(topPageAnimationText).innerHTML = "良い2月をお過ごしください";
+      Object(topPageAnimationText).setAttribute("style", "color: #795548;");
+    }, time);
   });
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("h5", {
     id: "greetingText",
     className: "greetingText"
-  }));
+  }), react_1["default"].createElement("div", {
+    id: "topPageAnimation",
+    className: "topPageAnimation"
+  }, react_1["default"].createElement("h3", {
+    id: "topPageAnimationText",
+    className: "topPageAnimation__text"
+  }), react_1["default"].createElement("img", {
+    src: "/images/onikiti.jpg",
+    id: "onikitiImg",
+    className: "topPageAnimation__onikitiImg"
+  }), react_1["default"].createElement("img", {
+    src: "/images/mamemaki.jpg",
+    id: "mamemakiImg",
+    className: "topPageAnimation__mamemakiImg"
+  }), react_1["default"].createElement("img", {
+    src: "/images/bg.jpg",
+    id: "topPageAnimationBg",
+    className: "topPageAnimation__bg"
+  }), react_1["default"].createElement("img", {
+    src: "/images/love.jpg",
+    id: "loveImg",
+    className: "topPageAnimation__loveImg"
+  })));
 };
 
 exports["default"] = Top;

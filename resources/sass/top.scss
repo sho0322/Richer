@@ -1,3 +1,4 @@
+@import "keyframes";
 .greetingText {
     width: 8ch;
     animation: typing 2s steps(22), step-end infinite alternate;
@@ -6,8 +7,68 @@
     font-family: monospace;
     font-size: 2em;
 }
-@keyframes typing {
-    from {
-        width: 0;
+.topPageAnimation {
+    width: 90%;
+    height: 300px;
+    margin: 5% auto;
+    background-color: white;
+    @include boxShadowColor(15px);
+    background-size: cover;
+    border: #000 solid 1px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    &__bg {
+        height: 100%;
+        background-size: contain;
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+        &.show {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    &__onikitiImg {
+        position: absolute;
+        width: 45%;
+        top: 44%;
+        left: 27%;
+        opacity: 0;
+        transition: all 1000ms ease-in-out;
+        &.show {
+            opacity: 1;
+        }
+    }
+    &__text {
+        position: absolute;
+        width: 50%;
+        left: 27%;
+        top: 35%;
+        &.show {
+            z-index: 2;
+            top: 40%;
+            left: 17%;
+            width: 70%;
+        }
+    }
+    &__mamemakiImg {
+        position: absolute;
+        width: 50%;
+        right: 2%;
+        opacity: 0;
+        &.show {
+            opacity: 1;
+            animation: diagonal-move-anim 3s linear infinite alternate;
+        }
+    }
+    &__loveImg {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: all 1000ms ease-in-out;
+        &.show {
+            opacity: 0.8;
+        }
     }
 }
