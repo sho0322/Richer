@@ -77,7 +77,7 @@ const Top = () => {
         }, time);
         time += 1200;
         setTimeout(() => {
-            Object(topPageAnimationText).innerHTML = "大切な人に思いを伝える";
+            Object(topPageAnimationText).innerHTML = "大切な人に想いを伝える";
         }, time);
         time += 1200;
         setTimeout(() => {
