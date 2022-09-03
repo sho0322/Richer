@@ -108,6 +108,93 @@ const Top = () => {
                 "color: #795548;"
             );
         }, time);
+
+        const MENU_LIST: readonly string[] = [
+            "選択",
+            "投稿",
+            "予定",
+            "検索",
+            "通知",
+            "連絡",
+        ];
+        const getOption = document.querySelectorAll("option");
+        const OPTION_LIST = Object(getOption).length;
+        const explanationList = document.querySelector("#explanationList");
+
+        for (let i = 0; i < OPTION_LIST; i++) {
+            Object(getOption[i]).innerHTML = MENU_LIST[i];
+        }
+        // 画像URL
+
+        const SELECT_IMAGES: { [key: string]: string } = {
+            default: "/images/bg.jpg",
+            timeline: "/images/bg.jpg",
+            schedule: "/images/bg.jpg",
+            search: "/images/bg.jpg",
+            notification: "/images/bg.jpg",
+            contact: "/images/bg.jpg",
+        };
+
+        // 分割代入で画像URLを扱う。
+
+        const {
+            default: DEFAULT,
+            timeline: TIMELINE,
+            schedule: SCHEDULE,
+            search: SEARCH,
+            notification: NOTIFICATION,
+            contact: CONTACT,
+        } = SELECT_IMAGES;
+
+        // セレクトボックスの値によって画像を切り替える。
+        const changeImage = document.querySelector("#changeImage");
+
+        explanationList?.addEventListener("change", () => {
+            Object(explanationList).firstElementChild.innerHTML = "基本";
+
+            switch (Object(explanationList).value) {
+                case "selectTimeline":
+                    changeImage!.setAttribute("src", TIMELINE);
+                    break;
+                case "selectSchedule":
+                    changeImage!.setAttribute("src", SCHEDULE);
+                    break;
+                case "selectSearch":
+                    changeImage!.setAttribute("src", SEARCH);
+                    break;
+                case "selectNotification":
+                    changeImage!.setAttribute("src", NOTIFICATION);
+                    break;
+                case "selectContact":
+                    changeImage!.setAttribute("src", CONTACT);
+                    break;
+                default:
+                    changeImage!.setAttribute("src", DEFAULT);
+                    break;
+            }
+        });
+
+        // 画像プレビュー表示用の処理。(セレクトボックスの色も変わる)
+        try {
+            changeImage?.addEventListener("click", () => {
+                setTimeout(() => {
+                    changeImage!.setAttribute("style", "width:100%;");
+                    explanationList!.setAttribute(
+                        "style",
+                        "background-color: goldenrod; color: white;"
+                    );
+                }, 100);
+                addEventListener("click", () => {
+                    changeImage!.setAttribute("style", "width:80%;");
+                    explanationList!.setAttribute(
+                        "style",
+                        "background-color: white; color: black;"
+                    );
+                });
+            });
+        } catch (e) {
+            alert("ページを再読み込みしてください。");
+        }
     });
     return (
         <>
@@ -137,6 +224,23 @@ const Top = () => {
                     id="loveImg"
                     className={"topPageAnimation__loveImg"}
                 ></img>
+            </div>
+            <div className={"explanation"}>
+                <h4 className={"explanation__text"}>このアプリの使い方</h4>
+                <img
+                    id="changeImage"
+                    className={"explanation__imagePosition"}
+                    src="https://www.evernote.com/l/AOJvwDeLIhtAE4B8mglnnHc4TQ0y2p18xGYB/image.jpg"
+                    alt="このアプリの使い方"
+                />
+                <select name="selectExplanation" id="explanationList">
+                    <option value="noselectDefault"></option>
+                    <option value="selectTimeline"></option>
+                    <option value="selectSchedule"></option>
+                    <option value="selectSearch"></option>
+                    <option value="selectNotification"></option>
+                    <option value="selectContact"></option>
+                </select>
             </div>
         </>
     );

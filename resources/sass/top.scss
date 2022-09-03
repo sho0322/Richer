@@ -72,3 +72,29 @@
         }
     }
 }
+
+select {
+    width: 50%;
+    height: 42px;
+    text-align: center;
+    outline: none;
+    border: skyblue 2px inset;
+    @include boxShadowColor(12px);
+    cursor: pointer;
+}
+
+// explanation s
+.explanation {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 0 auto;
+    padding: 10px 0px;
+    &__text {
+        color: brown;
+    }
+    &__imagePosition {
+        transition: all 1000ms ease-in-out;
+        margin: 15px 0px 15px 0px;
+        width: 80%;
+    }
+}

@@ -394,6 +394,77 @@ var Top = function Top() {
       Object(topPageAnimationText).innerHTML = "良い2月をお過ごしください";
       Object(topPageAnimationText).setAttribute("style", "color: #795548;");
     }, time);
+    var MENU_LIST = ["選択", "投稿", "予定", "検索", "通知", "連絡"];
+    var getOption = document.querySelectorAll("option");
+    var OPTION_LIST = Object(getOption).length;
+    var explanationList = document.querySelector("#explanationList");
+
+    for (var i = 0; i < OPTION_LIST; i++) {
+      Object(getOption[i]).innerHTML = MENU_LIST[i];
+    } // 画像URL
+
+
+    var SELECT_IMAGES = {
+      "default": "/images/bg.jpg",
+      timeline: "/images/bg.jpg",
+      schedule: "/images/bg.jpg",
+      search: "/images/bg.jpg",
+      notification: "/images/bg.jpg",
+      contact: "/images/bg.jpg"
+    }; // 分割代入で画像URLを扱う。
+
+    var DEFAULT = SELECT_IMAGES["default"],
+        TIMELINE = SELECT_IMAGES.timeline,
+        SCHEDULE = SELECT_IMAGES.schedule,
+        SEARCH = SELECT_IMAGES.search,
+        NOTIFICATION = SELECT_IMAGES.notification,
+        CONTACT = SELECT_IMAGES.contact; // セレクトボックスの値によって画像を切り替える。
+
+    var changeImage = document.querySelector("#changeImage");
+    explanationList === null || explanationList === void 0 ? void 0 : explanationList.addEventListener("change", function () {
+      Object(explanationList).firstElementChild.innerHTML = "基本";
+
+      switch (Object(explanationList).value) {
+        case "selectTimeline":
+          changeImage.setAttribute("src", TIMELINE);
+          break;
+
+        case "selectSchedule":
+          changeImage.setAttribute("src", SCHEDULE);
+          break;
+
+        case "selectSearch":
+          changeImage.setAttribute("src", SEARCH);
+          break;
+
+        case "selectNotification":
+          changeImage.setAttribute("src", NOTIFICATION);
+          break;
+
+        case "selectContact":
+          changeImage.setAttribute("src", CONTACT);
+          break;
+
+        default:
+          changeImage.setAttribute("src", DEFAULT);
+          break;
+      }
+    }); // 画像プレビュー表示用の処理。(セレクトボックスの色も変わる)
+
+    try {
+      changeImage === null || changeImage === void 0 ? void 0 : changeImage.addEventListener("click", function () {
+        setTimeout(function () {
+          changeImage.setAttribute("style", "width:100%;");
+          explanationList.setAttribute("style", "background-color: goldenrod; color: white;");
+        }, 100);
+        addEventListener("click", function () {
+          changeImage.setAttribute("style", "width:80%;");
+          explanationList.setAttribute("style", "background-color: white; color: black;");
+        });
+      });
+    } catch (e) {
+      alert("ページを再読み込みしてください。");
+    }
   });
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("h5", {
     id: "greetingText",
@@ -420,7 +491,31 @@ var Top = function Top() {
     src: "/images/love.jpg",
     id: "loveImg",
     className: "topPageAnimation__loveImg"
-  })));
+  })), react_1["default"].createElement("div", {
+    className: "explanation"
+  }, react_1["default"].createElement("h4", {
+    className: "explanation__text"
+  }, "\u3053\u306E\u30A2\u30D7\u30EA\u306E\u4F7F\u3044\u65B9"), react_1["default"].createElement("img", {
+    id: "changeImage",
+    className: "explanation__imagePosition",
+    src: "https://www.evernote.com/l/AOJvwDeLIhtAE4B8mglnnHc4TQ0y2p18xGYB/image.jpg",
+    alt: "\u3053\u306E\u30A2\u30D7\u30EA\u306E\u4F7F\u3044\u65B9"
+  }), react_1["default"].createElement("select", {
+    name: "selectExplanation",
+    id: "explanationList"
+  }, react_1["default"].createElement("option", {
+    value: "noselectDefault"
+  }), react_1["default"].createElement("option", {
+    value: "selectTimeline"
+  }), react_1["default"].createElement("option", {
+    value: "selectSchedule"
+  }), react_1["default"].createElement("option", {
+    value: "selectSearch"
+  }), react_1["default"].createElement("option", {
+    value: "selectNotification"
+  }), react_1["default"].createElement("option", {
+    value: "selectContact"
+  }))));
 };
 
 exports["default"] = Top;
